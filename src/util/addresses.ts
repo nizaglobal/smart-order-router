@@ -269,9 +269,9 @@ export const WETH9: {
     'WNiza',
     'Wrapped Niza'
   ),
-  [ChainId.NIZA_LIVENET]: new Token(
-    ChainId.NIZA_LIVENET,
-    '0xCF5c11f4e1e0035fd163A9F2EE02c6D6C65D313D',
+  [ChainId.NIZA]: new Token(
+    ChainId.NIZA,
+    '0x1643F3680992334756912dF244540e7bf46f10f9',
     18,
     'NIZA',
     'Niza Global'

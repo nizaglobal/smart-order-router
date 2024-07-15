@@ -112,7 +112,7 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.ROOTSTOCK]: [WRAPPED_NATIVE_CURRENCY[ChainId.ROOTSTOCK]!],
   [ChainId.BLAST]: [WRAPPED_NATIVE_CURRENCY[ChainId.BLAST]!, USDB_BLAST],
   [ChainId.NIZA_TESTNET]: [],
-  [ChainId.NIZA_LIVENET]: [],
+  [ChainId.NIZA]: [],
 };
 
 /**
