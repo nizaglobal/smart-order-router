@@ -128,7 +128,7 @@ export const usdGasTokensByChain: { [chainId in ChainId]?: Token[] } = {
     NIZA_TESTNET_USDT,
     NIZA_TESTNET_DAI,
   ],
-  [ChainId.NIZA]: [USDT_NIZA, USDC_NIZA, DAI_NIZA],
+  [ChainId.NIZA]: [USDC_NIZA, USDT_NIZA, DAI_NIZA],
 };
 
 export type L1ToL2GasCosts = {

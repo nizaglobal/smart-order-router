@@ -3,7 +3,7 @@ import {
   Currency,
   Ether,
   NativeCurrency,
-  Token
+  Token,
 } from '@nizaglobal/sdk-core';
 
 // WIP: Gnosis, Moonbeam
@@ -62,7 +62,7 @@ export const NETWORKS_WITH_SAME_UNISWAP_ADDRESSES = [
   ChainId.OPTIMISM,
   ChainId.ARBITRUM_ONE,
   ChainId.POLYGON,
-  ChainId.POLYGON_MUMBAI
+  ChainId.POLYGON_MUMBAI,
 ];
 
 export const ID_TO_CHAIN_ID = (id: number): ChainId => {
@@ -694,7 +694,7 @@ class AvalancheNativeCurrency extends NativeCurrency {
   }
 }
 
-function isNiza(chainId: number): chainId is ChainId.NIZA_TESTNET | ChainId.NIZA {
+function isNiza(chainId: number): chainId is ChainId.NIZA {
   return chainId === ChainId.NIZA;
 }
 
