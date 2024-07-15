@@ -665,11 +665,11 @@ export const USDC_ZORA = new Token(
   'USD Coin (Bridged from Ethereum)'
 );
 
-// Niza Tokens 
+// Niza Tokens
 export const USDT_NIZA = new Token(
   ChainId.NIZA,
   '0x6A04ed570925e383a5D2274D45D2a9971893a14B',
-  18,
+  6,
   'USDT',
   'Tether USD'
 );
@@ -677,7 +677,7 @@ export const USDT_NIZA = new Token(
 export const USDC_NIZA = new Token(
   ChainId.NIZA,
   '0x31A77dbC23DCDB601bAA50d1f108273C8E04841a',
-  18,
+  6,
   'USDC',
   'USDC on Niza'
 );
@@ -738,8 +738,6 @@ export const NIZA_TESTNET_WETH = new Token(
   'WETHMock',
   'Wrapped Ether Mock'
 );
-
-
 
 export class TokenProvider implements ITokenProvider {
   constructor(
@@ -947,7 +945,7 @@ export const DAI_ON = (chainId: ChainId): Token => {
     case ChainId.AVALANCHE:
       return DAI_AVAX;
     case ChainId.NIZA:
-     return DAI_NIZA;
+      return DAI_NIZA;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }
@@ -976,7 +974,7 @@ export const USDT_ON = (chainId: ChainId): Token => {
   }
 };
 
-export const  USDC_ON = (chainId: ChainId): Token => {
+export const USDC_ON = (chainId: ChainId): Token => {
   switch (chainId) {
     case ChainId.MAINNET:
       return USDC_MAINNET;

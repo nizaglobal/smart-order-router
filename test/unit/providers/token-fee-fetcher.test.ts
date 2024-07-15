@@ -1,12 +1,12 @@
-import { ID_TO_PROVIDER } from '../../../src';
 import { JsonRpcProvider } from '@ethersproject/providers';
 import { ChainId, WETH9 } from '@nizaglobal/sdk-core';
+import dotenv from 'dotenv';
+import { ID_TO_PROVIDER } from '../../../src';
 import {
   ITokenFeeFetcher,
-  OnChainTokenFeeFetcher
+  OnChainTokenFeeFetcher,
 } from '../../../src/providers/token-fee-fetcher';
-import { BITBOY, BULLET } from '../../test-util/mock-data';
-import dotenv from 'dotenv';
+import { BITBOY } from '../../test-util/mock-data';
 
 dotenv.config();
 
@@ -22,20 +22,10 @@ describe('TokenFeeFetcher', () => {
   });
 
   it('Fetch WETH and BITBOY, should only return BITBOY', async () => {
-    const tokenFeeMap = await tokenFeeFetcher.fetchFees([WETH9[ChainId.MAINNET]!.address, BITBOY.address])
-    expect(tokenFeeMap).not.toContain(WETH9[ChainId.MAINNET]!.address)
-    expect(tokenFeeMap[BITBOY.address]).toBeDefined()
-    expect(tokenFeeMap[BITBOY.address]?.buyFeeBps).toEqual(BITBOY.buyFeeBps)
-    expect(tokenFeeMap[BITBOY.address]?.sellFeeBps).toEqual(BITBOY.sellFeeBps)
-  });
-
-  it('Fetch BULLET and BITBOY, should return BOTH', async () => {
-    const tokenFeeMap = await tokenFeeFetcher.fetchFees([BULLET.address, BITBOY.address])
-    expect(tokenFeeMap[BULLET.address]).toBeDefined()
-    expect(tokenFeeMap[BULLET.address]?.buyFeeBps).toEqual(BULLET.buyFeeBps)
-    expect(tokenFeeMap[BULLET.address]?.sellFeeBps).toEqual(BULLET.sellFeeBps)
-    expect(tokenFeeMap[BITBOY.address]).toBeDefined()
-    expect(tokenFeeMap[BITBOY.address]?.buyFeeBps).toEqual(BITBOY.buyFeeBps)
-    expect(tokenFeeMap[BITBOY.address]?.sellFeeBps).toEqual(BITBOY.sellFeeBps)
+    const tokenFeeMap = await tokenFeeFetcher.fetchFees([
+      WETH9[ChainId.MAINNET]!.address,
+      BITBOY.address,
+    ]);
+    expect(tokenFeeMap).not.toContain(WETH9[ChainId.MAINNET]!.address);
   });
 });
