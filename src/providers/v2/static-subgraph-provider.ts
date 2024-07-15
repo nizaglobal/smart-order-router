@@ -112,7 +112,7 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.ROOTSTOCK]: [WRAPPED_NATIVE_CURRENCY[ChainId.ROOTSTOCK]!],
   [ChainId.BLAST]: [WRAPPED_NATIVE_CURRENCY[ChainId.BLAST]!, USDB_BLAST],
   [ChainId.NIZA_TESTNET]: [],
-  [ChainId.NIZA_LIVENET]: [],
+  [ChainId.NIZA]: [],
 };
 
 /**
@@ -128,7 +128,7 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
  * @class StaticV2SubgraphProvider
  */
 export class StaticV2SubgraphProvider implements IV2SubgraphProvider {
-  constructor(private chainId: ChainId) { }
+  constructor(private chainId: ChainId) {}
 
   public async getPools(
     tokenIn?: Token,
