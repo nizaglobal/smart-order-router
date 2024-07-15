@@ -21,7 +21,11 @@ import {
   DAI_OPTIMISM_GOERLI,
   DAI_OPTIMISM_SEPOLIA,
   DAI_POLYGON_MUMBAI,
-  DAI_SEPOLIA, NIZA_TESTNET_DAI, NIZA_TESTNET_USDC, NIZA_TESTNET_USDT, USDB_BLAST,
+  DAI_SEPOLIA,
+  NIZA_TESTNET_DAI,
+  NIZA_TESTNET_USDC,
+  NIZA_TESTNET_USDT,
+  USDB_BLAST,
   USDC_ARBITRUM,
   USDC_ARBITRUM_GOERLI,
   USDC_ARBITRUM_SEPOLIA,
@@ -56,7 +60,7 @@ import {
   USDT_OPTIMISM,
   USDT_OPTIMISM_GOERLI,
   USDT_OPTIMISM_SEPOLIA,
-  WBTC_GOERLI
+  WBTC_GOERLI,
 } from '../../../providers/token-provider';
 import { IV2PoolProvider } from '../../../providers/v2/pool-provider';
 import {
@@ -119,8 +123,12 @@ export const usdGasTokensByChain: { [chainId in ChainId]?: Token[] } = {
   [ChainId.BASE]: [USDC_BASE, USDC_NATIVE_BASE],
   [ChainId.BLAST]: [USDB_BLAST],
   [ChainId.ZORA]: [USDC_ZORA],
-  [ChainId.NIZA_TESTNET]: [NIZA_TESTNET_USDC, NIZA_TESTNET_USDT, NIZA_TESTNET_DAI],
-  [ChainId.NIZA]: [USDT_NIZA, USDC_NIZA, DAI_NIZA]
+  [ChainId.NIZA_TESTNET]: [
+    NIZA_TESTNET_USDC,
+    NIZA_TESTNET_USDT,
+    NIZA_TESTNET_DAI,
+  ],
+  [ChainId.NIZA]: [USDT_NIZA, USDC_NIZA, DAI_NIZA],
 };
 
 export type L1ToL2GasCosts = {

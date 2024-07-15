@@ -976,7 +976,7 @@ export const USDT_ON = (chainId: ChainId): Token => {
   }
 };
 
-export const USDC_ON = (chainId: ChainId): Token => {
+export const  USDC_ON = (chainId: ChainId): Token => {
   switch (chainId) {
     case ChainId.MAINNET:
       return USDC_MAINNET;

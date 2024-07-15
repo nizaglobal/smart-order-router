@@ -273,8 +273,8 @@ export const WETH9: {
     ChainId.NIZA,
     '0x1643F3680992334756912dF244540e7bf46f10f9',
     18,
-    'NIZA',
-    'Niza Global'
+    'WNIZA',
+    'Wrapped Niza '
   ),
 };
 

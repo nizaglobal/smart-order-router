@@ -174,8 +174,20 @@ const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.ZORA_SEPOLIA]: [WRAPPED_NATIVE_CURRENCY[ChainId.ZORA_SEPOLIA]!],
   [ChainId.ROOTSTOCK]: [WRAPPED_NATIVE_CURRENCY[ChainId.ROOTSTOCK]!],
   [ChainId.BLAST]: [WRAPPED_NATIVE_CURRENCY[ChainId.BLAST]!, USDB_BLAST],
-  [ChainId.NIZA_TESTNET]: [WRAPPED_NATIVE_CURRENCY[ChainId.NIZA_TESTNET], NIZA_TESTNET_WETH, NIZA_TESTNET_DAI, NIZA_TESTNET_USDC, NIZA_TESTNET_USDT, NIZA_TESTNET_WBTC!],
-  [ChainId.NIZA]: [WRAPPED_NATIVE_CURRENCY[ChainId.NIZA], DAI_NIZA, USDC_NIZA, USDT_NIZA],
+  [ChainId.NIZA_TESTNET]: [
+    WRAPPED_NATIVE_CURRENCY[ChainId.NIZA_TESTNET],
+    NIZA_TESTNET_WETH,
+    NIZA_TESTNET_DAI,
+    NIZA_TESTNET_USDC,
+    NIZA_TESTNET_USDT,
+    NIZA_TESTNET_WBTC!,
+  ],
+  [ChainId.NIZA]: [
+    WRAPPED_NATIVE_CURRENCY[ChainId.NIZA]!,
+    DAI_NIZA,
+    USDC_NIZA,
+    USDT_NIZA,
+  ],
 };
 
 /**
@@ -193,7 +205,7 @@ export class StaticV3SubgraphProvider implements IV3SubgraphProvider {
   constructor(
     private chainId: ChainId,
     private poolProvider: IV3PoolProvider
-  ) { }
+  ) {}
 
   public async getPools(
     tokenIn?: Token,
