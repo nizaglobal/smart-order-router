@@ -1,6 +1,6 @@
 {
   "name": "@nizaglobal/smart-order-router",
-  "version": "3.33.3",
+  "version": "3.33.6",
   "description": "Uniswap Smart Order Router",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
